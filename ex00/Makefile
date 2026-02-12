@@ -1,6 +1,6 @@
-NAME		:= NOW_WE_RE_TALKING
+NAME		:= ClapTraps
 
-SRCS		:= main.cpp Fixed.cpp
+SRCS		:= main.cpp ClapTrap.cpp
 
 OBJ_DIR		:= obj
 

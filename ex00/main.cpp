@@ -1,18 +1,19 @@
-#include "Fixed.hpp"
+#include "ClapTrap.hpp"
 
-int main( void ) {
-    Fixed a;
-    Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+int main(){
 
-    std::cout << a << std::endl;
-    std::cout << ++a << std::endl;
-    std::cout << a << std::endl;
-    std::cout << a++ << std::endl;
-    std::cout << a << std::endl;
+    ClapTrap ct1("Bolt");
+    ClapTrap ct2(ct1);
+    ClapTrap ct3("Harry");
+    ClapTrap ct4("Thunder");
 
-    std::cout << b << std::endl;
+    ct3 = ct2;
 
-    std::cout << Fixed::max( a, b ) << std::endl;
+    ct1.beRepaired(0);
+    ct2.beRepaired(0);
+    ct3.beRepaired(0);
+    ct4.beRepaired(0);
 
-    return 0;
+    ct1.attack("Thunder");
+    ct4.takeDamage(ATTACK_POWER);
 }
