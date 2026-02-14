@@ -4,23 +4,22 @@
 # include <iostream>
 # include <string>
 
-// Macros:
-# define HIT_POINTS (unsigned int)10
-# define ENERGY_POINTS (unsigned int)10
-# define ATTACK_POWER (unsigned int)0
-
 // Messages:
 # define CLAPTRAP_MSG "\e[0;32mClapTrap\e[0m"
 
-# define DEF_CONSTR_CLP_MSG "\e[0;33mDefault Constructor\e[0m called of "
-# define COPY_CONSTR_CLP_MSG "\e[0;33mCopy Constructor\e[0m called of "
-# define COPY_ASSIGN_OP_CLP_MSG "\e[0;35mCopy assignment operator\e[0m called of "
-# define DESTR_CLP_MSG "\e[0;31mDestructor\e[0m called of "
-// # define MSG_CLP ""
-// # define MSG_CLP ""
+# define DEF_CONSTR_MSG "\e[0;33mDefault Constructor\e[0m called of "
+# define STR_CONSTR_MSG "\e[0;33mString Parameter Constructor\e[0m called of "
+# define COPY_CONSTR_MSG "\e[0;33mCopy Constructor\e[0m called of "
+# define COPY_ASSIGN_OP_MSG "\e[0;35mCopy assignment operator\e[0m called of "
+# define DESTR_MSG "\e[0;31mDestructor\e[0m called of "
 
 // Class implementations:
 class ClapTrap {
+
+    // ClapTrap variables:
+    static const int hit_points_clp = 10;
+    static const int energy_points_clp = 10;
+    static const int attack_power_clp = 0;
 
     private:
         std::string  _name;
@@ -29,6 +28,7 @@ class ClapTrap {
         unsigned int _attackPower;
 
     public:
+        ClapTrap();
         ClapTrap(std::string name);
         ClapTrap(const ClapTrap &copy);
         ClapTrap& operator=(const ClapTrap &assign);
