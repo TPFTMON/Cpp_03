@@ -1,6 +1,6 @@
-NAME		:= NOW_WE_RE_TALKING
+NAME		:= ScavTraps
 
-SRCS		:= main.cpp Fixed.cpp
+SRCS		:= main.cpp ClapTrap.cpp ScavTrap.cpp
 
 OBJ_DIR		:= obj
 

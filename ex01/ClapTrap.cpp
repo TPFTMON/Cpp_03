@@ -5,16 +5,22 @@
 // ================================================================
 
 // Constructors
+ClapTrap::ClapTrap()
+    : _name("Nameless One"), _hitPoints(hit_points_clp), _energyPoints(energy_points_clp), _attackPower(attack_power_clp)
+{
+    std::cout << DEF_CONSTR_MSG << CLAPTRAP_MSG << "\n";
+}
+
 ClapTrap::ClapTrap(std::string name)
-    : _name(name), _hitPoints(HIT_POINTS), _energyPoints(ENERGY_POINTS), _attackPower(ATTACK_POWER)
+    : _name(name), _hitPoints(hit_points_clp), _energyPoints(energy_points_clp), _attackPower(attack_power_clp)
 {
 
-    std::cout << DEF_CONSTR_CLP_MSG << CLAPTRAP_MSG << "\n";
+    std::cout << STR_CONSTR_MSG << CLAPTRAP_MSG << "\n";
 }
 
 ClapTrap::ClapTrap(const ClapTrap &to_copy){
 
-    std::cout << COPY_CONSTR_CLP_MSG << CLAPTRAP_MSG << "\n";
+    std::cout << COPY_CONSTR_MSG << CLAPTRAP_MSG << "\n";
 
     this->_name = to_copy._name;
     this->_hitPoints = to_copy._hitPoints;
@@ -26,7 +32,7 @@ ClapTrap::ClapTrap(const ClapTrap &to_copy){
 // Operators
 ClapTrap & ClapTrap::operator=(const ClapTrap &other){
 
-    std::cout << COPY_ASSIGN_OP_CLP_MSG << CLAPTRAP_MSG << "\n";
+    std::cout << COPY_ASSIGN_OP_MSG << CLAPTRAP_MSG << "\n";
 
     if (this != &other){
         this->_name = other._name;
@@ -40,7 +46,7 @@ ClapTrap & ClapTrap::operator=(const ClapTrap &other){
 // Destructor
 ClapTrap::~ClapTrap(){
 
-    std::cout << DESTR_CLP_MSG << CLAPTRAP_MSG << "\n";
+    std::cout << DESTR_MSG << CLAPTRAP_MSG << "\n";
 }
 
 

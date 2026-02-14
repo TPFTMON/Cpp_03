@@ -1,18 +1,23 @@
-#include "Fixed.hpp"
+#include "ScavTrap.hpp"
 
 int main( void ) {
-    Fixed a;
-    Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 
-    std::cout << a << std::endl;
-    std::cout << ++a << std::endl;
-    std::cout << a << std::endl;
-    std::cout << a++ << std::endl;
-    std::cout << a << std::endl;
+    ScavTrap st0;
+    ScavTrap st1("Abrams");
+    ScavTrap st2(st1);
+    ScavTrap st3("Steven");
+    ScavTrap st4("Boris");
 
-    std::cout << b << std::endl;
+    st3 = st2;
 
-    std::cout << Fixed::max( a, b ) << std::endl;
+    st0.beRepaired(0);
+    st1.beRepaired(0);
+    st2.beRepaired(0);
+    st3.beRepaired(0);
+    st4.beRepaired(0);
 
-    return 0;
+    st1.attack("Boris");
+    st4.takeDamage(20);
+
+    st1.guardGate();
 }
