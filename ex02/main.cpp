@@ -1,18 +1,23 @@
-#include "Fixed.hpp"
+#include "FragTrap.hpp"
 
 int main( void ) {
-    Fixed a;
-    Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 
-    std::cout << a << std::endl;
-    std::cout << ++a << std::endl;
-    std::cout << a << std::endl;
-    std::cout << a++ << std::endl;
-    std::cout << a << std::endl;
+    FragTrap ft0;
+    FragTrap ft1("Jeremy");
+    FragTrap ft2(ft1);
+    FragTrap ft3("Hideo");
+    FragTrap ft4("Rick");
 
-    std::cout << b << std::endl;
+    ft3 = ft2;
 
-    std::cout << Fixed::max( a, b ) << std::endl;
+    ft0.beRepaired(0);
+    ft1.beRepaired(0);
+    ft2.beRepaired(0);
+    ft3.beRepaired(0);
+    ft4.beRepaired(0);
 
-    return 0;
+    ft1.attack("Rick");
+    ft4.takeDamage(30);
+
+    ft1.highFivesGuys();
 }

@@ -1,6 +1,6 @@
-NAME		:=
+NAME		:= FragTraps
 
-SRCS		:= #main.cpp
+SRCS		:= main.cpp ClapTrap.cpp FragTrap.cpp
 
 OBJ_DIR		:= obj
 
